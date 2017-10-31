@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD07B7861FA8F957003F36B3 /* JsonArrays.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD07B7851FA8F957003F36B3 /* JsonArrays.swift */; };
+		DD07B7881FA904FD003F36B3 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD07B7871FA904FD003F36B3 /* Person.swift */; };
 		DDC0DC471FA79E3400411B3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC0DC461FA79E3400411B3B /* AppDelegate.swift */; };
 		DDC0DC491FA79E3400411B3B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC0DC481FA79E3400411B3B /* ViewController.swift */; };
 		DDC0DC4C1FA79E3400411B3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDC0DC4A1FA79E3400411B3B /* Main.storyboard */; };
@@ -14,6 +16,8 @@
 		DDC0DC511FA79E3400411B3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDC0DC4F1FA79E3400411B3B /* LaunchScreen.storyboard */; };
 		DDC0DC5C1FA79E3500411B3B /* FaceIDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC0DC5B1FA79E3500411B3B /* FaceIDTests.swift */; };
 		DDC0DC671FA79E3500411B3B /* FaceIDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC0DC661FA79E3500411B3B /* FaceIDUITests.swift */; };
+		DDC0DC791FA7A3C400411B3B /* Initialize.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC0DC781FA7A3C400411B3B /* Initialize.swift */; };
+		DDC0DC7F1FA7B1D400411B3B /* PersonGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC0DC7E1FA7B1D400411B3B /* PersonGroup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DD07B7851FA8F957003F36B3 /* JsonArrays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonArrays.swift; sourceTree = "<group>"; };
+		DD07B7871FA904FD003F36B3 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		DDC0DC431FA79E3400411B3B /* FaceID.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceID.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDC0DC461FA79E3400411B3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDC0DC481FA79E3400411B3B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +53,8 @@
 		DDC0DC621FA79E3500411B3B /* FaceIDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FaceIDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDC0DC661FA79E3500411B3B /* FaceIDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceIDUITests.swift; sourceTree = "<group>"; };
 		DDC0DC681FA79E3500411B3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDC0DC781FA7A3C400411B3B /* Initialize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Initialize.swift; sourceTree = "<group>"; };
+		DDC0DC7E1FA7B1D400411B3B /* PersonGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonGroup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +111,10 @@
 				DDC0DC4D1FA79E3400411B3B /* Assets.xcassets */,
 				DDC0DC4F1FA79E3400411B3B /* LaunchScreen.storyboard */,
 				DDC0DC521FA79E3400411B3B /* Info.plist */,
+				DDC0DC781FA7A3C400411B3B /* Initialize.swift */,
+				DDC0DC7E1FA7B1D400411B3B /* PersonGroup.swift */,
+				DD07B7871FA904FD003F36B3 /* Person.swift */,
+				DD07B7851FA8F957003F36B3 /* JsonArrays.swift */,
 			);
 			path = FaceID;
 			sourceTree = "<group>";
@@ -259,8 +271,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD07B7881FA904FD003F36B3 /* Person.swift in Sources */,
+				DDC0DC7F1FA7B1D400411B3B /* PersonGroup.swift in Sources */,
 				DDC0DC491FA79E3400411B3B /* ViewController.swift in Sources */,
+				DD07B7861FA8F957003F36B3 /* JsonArrays.swift in Sources */,
 				DDC0DC471FA79E3400411B3B /* AppDelegate.swift in Sources */,
+				DDC0DC791FA7A3C400411B3B /* Initialize.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
