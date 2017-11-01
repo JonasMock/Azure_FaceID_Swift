@@ -13,12 +13,21 @@ import UIKit
 struct PersonGroupArray: Codable {
     let personGroupId: String
     
-  
+    
 }
 
 struct PersonArray: Codable {
     let personId: String
     let name: String
+    
+    
+    
+}
+
+struct DetectArray: Codable {
+    let faceId: String
+  
+    
     
     
 }

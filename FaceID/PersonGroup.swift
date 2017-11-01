@@ -7,7 +7,7 @@
 //
 
 import Foundation
-class PersonGroup:Initialize{
+class PersonGroup: Initialize{
     
     
     
@@ -333,4 +333,6 @@ class PersonGroup:Initialize{
     
     
 }
+
+
 
