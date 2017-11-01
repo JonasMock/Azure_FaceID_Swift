@@ -20,8 +20,8 @@ class ViewController: UIViewController {
         //test.deletePersonGroup(personGroup: "group1")
         //test.getPersonGroupTrainingStatus(personGroup: "group1")
         //test.getPersonGroup(personGroup: "group1")
-        //test.listPersonGroup()
-        test.createPerson(personGroup: "group1", personName: "Jonas", personUserData: "")
+        test.listPerson(personGroup: "group1")
+        //test.createPerson(personGroup: "group1", personName: "Jonas", personUserData: "")
         
   
     }

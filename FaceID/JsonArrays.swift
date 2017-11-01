@@ -15,3 +15,10 @@ struct PersonGroupArray: Codable {
     
   
 }
+
+struct PersonArray: Codable {
+    let personId: String
+    let name: String
+    
+    
+}
