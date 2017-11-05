@@ -10,6 +10,7 @@ import Foundation
 
 import UIKit
 
+
 struct PersonGroupArray: Codable {
     let personGroupId: String
     
@@ -24,10 +25,60 @@ struct PersonArray: Codable {
     
 }
 
-struct DetectArray: Codable {
-    let faceId: String
-  
+struct DetectArray: Decodable {
+    var faceId: String
     
+    init(faceId: String) {
+        self.faceId = faceId
+        
+    }
     
+    func getId() -> String{
+        
+        
+        return faceId
+        
     
 }
+}
+
+struct Persons: Decodable {
+    
+    var personId: String
+    
+    init(personId: String) {
+        self.personId = personId
+       
+    }
+    
+    func getId() -> String{
+        
+        
+        return personId
+        
+    }
+    
+}
+
+struct Verify: Decodable {
+    
+    var isIdentical: Int
+    var confidence: Double
+    
+    
+    func getIsIdentical() -> Int{
+        
+        
+        return isIdentical
+        
+    }
+    func getConfidence() -> Double{
+        
+        
+        return confidence
+        
+    }
+    
+}
+
+

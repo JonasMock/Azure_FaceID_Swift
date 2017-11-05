@@ -11,7 +11,7 @@ class PersonGroup: Initialize{
     
     
     
-    func createPersonGroup(personGroup id:String, groupName name:String, groupUserData userData:String){
+    func createPersonGroup(personGroup id:String, groupName name:String, groupUserData userData:String) {
         
         
         let parameters = ["name": name, "userData": userData] as [String : Any]
@@ -51,6 +51,7 @@ class PersonGroup: Initialize{
                 //create json object from data
                 if let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any] {
                     print(json)
+                    
                     // handle json...
                 }
             } catch let error {
@@ -60,6 +61,10 @@ class PersonGroup: Initialize{
         task.resume()
         
     }
+    
+    
+    
+    
     
     func deletePersonGroup(personGroup id:String){
         
@@ -224,7 +229,7 @@ class PersonGroup: Initialize{
                 //create json decoder and decode data
                  let decoder = JSONDecoder()
                  let json = try decoder.decode( [PersonGroupArray].self, from: data)
-                    print(json)
+                    print()
                 
                 
             } catch let error {
@@ -248,7 +253,7 @@ class PersonGroup: Initialize{
         var request = URLRequest(url: url)
         request.httpMethod = "Post" //set http method as POST
         
-        //request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         //request.addValue("application/json", forHTTPHeaderField: "Accept")
         request.addValue(super.key, forHTTPHeaderField: "Ocp-Apim-Subscription-Key")
         
@@ -276,6 +281,7 @@ class PersonGroup: Initialize{
                 print(error)}
         })
         task.resume()
+        
         
     }
     
