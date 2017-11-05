@@ -71,7 +71,7 @@ class ViewController: UIViewController {
         sleep(2)
         demoBtn.isEnabled = false
         demoBtn.isHidden = true
-        verifyBtn.isEnabled = true
+        
         trainBtn.isEnabled = true
         personValue.text = test.createPerson(personGroup: "demo", personName: "demo", personUserData: "")
 
@@ -142,7 +142,7 @@ class ViewController: UIViewController {
             let test = Services(subscriptionKey: self.subscriptionKey, azureServerLocation: self.apiServer)
             test.trainPersonGroup(personGroup: "demo")
             self.trainedValue.text = "true"
-            
+            self.verifyBtn.isEnabled = true
             
         }
         
@@ -309,11 +309,39 @@ extension ViewController: UIImagePickerControllerDelegate {
         case 1:
             test.addPersonFace(personGroup: "demo", person: test.getPersonId(), source: imagedata!); break
         case 2:
-            test.verify(personGroup: "demo", personId: test.getPersonId(), persitedFaceId: test.detectLocal(source: imagedata!))
+            var verifyy = ""
             imageView.image = mirroredImage
-            print("caseDetect")
-            confiValue.text = ViewController.confidence
-            verifiedValue.text = ViewController.identical
+            
+            if (imageView != nil){
+                verifyy = test.verify(personGroup: "demo", personId: test.getPersonId(), persitedFaceId: test.detectLocal(source: imagedata!))
+                
+                print("caseDetect")
+                
+                var prime = true
+                while(prime){
+                    
+                    if (verifyy == "true"){
+                        if (Int(test.getIdentical()) == 1){
+                            verifiedValue.text = "true"
+                        }else{
+                            verifiedValue.text = "false"
+                        }
+                        var test = Double(test.getconfidence())! * 100
+                        confiValue.text = "\(test) %"
+                        prime = false
+                    }else{
+                        print("Wait")
+                    }
+                    
+                }
+                
+            }
+     
+            
+            
+           
+            
+   
             break
         default:
             print("default")

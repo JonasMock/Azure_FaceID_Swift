@@ -18,7 +18,7 @@ class Services: Person {
   
     
     
-    func verify(personGroup id:String, personId pId:String, persitedFaceId fId:String){
+    func verify(personGroup id:String, personId pId:String, persitedFaceId fId:String) -> String{
         
         let parameters = ["faceId": fId, "personId": pId, "personGroupId": id] as [String : Any]
         
@@ -112,13 +112,9 @@ class Services: Person {
                 print(error)}
         })
         task.resume()
-        
-        if (Int(getIdentical()) == 1){
-            ViewController.identical = "true"
-        }else{
-            
-        }
-        ViewController.confidence = getconfidence()
+        sleep(2)
+        let tmp = "true"
+        return tmp
         
     }
     
